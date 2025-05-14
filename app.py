@@ -174,7 +174,7 @@ def main():
     st.sidebar.title("Reconnaissance de caractères manuscrits")
 
 # Affichage du logo en cercle
-    st.sidebar.image('textVisionLogo.png', use_column_width=True, caption="EMNIST Dataset", width=100, help="Cercle")
+    st.sidebar.image('textVisionLogo.png', use_column_width=True, caption="t", width=100, help="Cercle")
 
 
     
