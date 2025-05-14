@@ -176,7 +176,7 @@ def main():
 
     # Afficher l'image avec la classe CSS "circle-img" pour la rendre circulaire
     st.sidebar.image('textVisionLogo.png', 
-                     caption="EMNIST Dataset", use_column_width=False, width=150) 
+                     caption="EMNIST Dataset", width=150) 
     
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
     st.sidebar.header("À propos du modèle")
@@ -187,12 +187,6 @@ def main():
         - Les lettres majuscules (A-Z)
         - Les lettres minuscules (a-z) quand elles diffèrent visuellement des majuscules
         
-        Détails du modèle:
-        - Type: Réseau de neurones MLPClassifier (scikit-learn)
-        - Architecture: 784-200-100-47
-        - Activation: ReLU
-        - Optimiseur: Adam
-        - Précision: ~85-90% sur le jeu de test
     """)
     
     st.sidebar.header("Comment utiliser")
