@@ -14,7 +14,7 @@ st.set_page_config(page_title="Reconnaissance de caractères manuscrits", layout
 @st.cache_resource
 def load_model():
     try:
-        return joblib.load('emnist_mlp_model.joblib')
+        return joblib.load('emnist_mlp_model2.joblib')
     except FileNotFoundError:
         st.error("Modèle non trouvé. Veuillez d'abord entraîner le modèle avec le dataset EMNIST.")
         return None
