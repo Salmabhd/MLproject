@@ -159,6 +159,18 @@ import os
 def main():
     # Barre latérale
     st.sidebar.title("Reconnaissance de caractères manuscrits")
+    st.sidebar.markdown("""
+        <style>
+            .logo-img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 150px;  /* Ajuste la taille du logo */
+                height: 150px;  /* Assure que la hauteur est égale à la largeur pour obtenir un cercle */
+                border-radius: 50%;  /* Applique le style circulaire */
+            }
+        </style>
+    """, unsafe_allow_html=True)
     st.sidebar.image('textVisionLogo.png', 
                       width=150, caption="EMNIST Dataset")
     
