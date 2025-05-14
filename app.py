@@ -157,22 +157,26 @@ import streamlit as st
 import os
 
 def main():
-    # Barre latérale
+    
     st.sidebar.title("Reconnaissance de caractères manuscrits")
+
+    # Centrer l'image et la mettre en forme circulaire via CSS
     st.sidebar.markdown("""
         <style>
-            .logo-img {
+            .circle-img {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 150px;  /* Ajuste la taille du logo */
-                height: 150px;  /* Assure que la hauteur est égale à la largeur pour obtenir un cercle */
+                width: 150px;  /* Taille du logo */
+                height: 150px;  /* Assurer que la hauteur est égale à la largeur pour obtenir un cercle */
                 border-radius: 50%;  /* Applique le style circulaire */
             }
         </style>
     """, unsafe_allow_html=True)
+
+    # Afficher l'image avec la classe CSS "circle-img" pour la rendre circulaire
     st.sidebar.image('textVisionLogo.png', 
-                      caption="EMNIST Dataset", use_column_width=False, width=150)    
+                     caption="EMNIST Dataset", use_column_width=False, width=150) 
     
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
     st.sidebar.header("À propos du modèle")
