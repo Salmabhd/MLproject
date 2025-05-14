@@ -156,7 +156,7 @@ def recognize_text(image):
 def main():
     # Barre latérale
     st.sidebar.title("Reconnaissance de caractères manuscrits")
-    st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/f/f8/EMNIST_helloworld.png', 
+    st.sidebar.image('textVisionLogo.png', 
                      use_column_width=True, caption="EMNIST Dataset")
     
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
