@@ -155,29 +155,9 @@ def recognize_text(image):
 
 def main():
     # Barre latérale
-   
-        # Ajoute du style CSS pour rendre l'image circulaire
-   st.markdown(
-     """
-     <style>
-     .circle-img {
-         border-radius: 50%;
-         width: 100px;  /* Ajuste la taille du cercle selon ton besoin */
-         height: 100px;
-     }
-     </style>
-     """,
-    unsafe_allow_html=True,
-    )
-
-# Titre de la sidebar
+    st.markdown("""<style>.circle-img { border-radius: 50%;width: 100px;  /* Ajuste la taille du cercle selon ton besoin */height: 100px;} </style>""",unsafe_allow_html=True,)
     st.sidebar.title("Reconnaissance de caractères manuscrits")
-
-# Affichage du logo en cercle
     st.sidebar.image('textVisionLogo.png', use_column_width=True, caption="t", width=100, help="Cercle")
-
-
-    
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
     st.sidebar.header("À propos du modèle")
     st.sidebar.write("""
