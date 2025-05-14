@@ -172,7 +172,7 @@ def main():
         </style>
     """, unsafe_allow_html=True)
     st.sidebar.image('textVisionLogo.png', 
-                      width=150, caption="EMNIST Dataset")
+                      caption="EMNIST Dataset", use_column_width=False, width=150)    
     
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
     st.sidebar.header("À propos du modèle")
