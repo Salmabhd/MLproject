@@ -153,11 +153,31 @@ def recognize_text(image):
     
     return ''.join(recognized_chars), fig, char_images, recognized_chars
 
+import streamlit as st
+import os
+
 def main():
     # Barre latérale
-    st.markdown("""<style>.circle-img { border-radius: 50%;width: 100px;  /* Ajuste la taille du cercle selon ton besoin */height: 100px;} </style>""",unsafe_allow_html=True,)
+    st.markdown("""
+    <style>
+    .circle-img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Titre et image de la sidebar
     st.sidebar.title("Reconnaissance de caractères manuscrits")
-    st.sidebar.image('textVisionLogo.png', use_column_width=True, caption="t", width=100, help="Cercle")
+    
+    # Vérifier que l'image existe avant de la charger
+    image_path = 'textVisionLogo.png'
+    if os.path.exists(image_path):
+        st.sidebar.image(image_path, use_column_width=True, caption="t", width=100, help="Cercle")
+    else:
+        st.sidebar.write("L'image n'a pas été trouvée.")
+    
     st.sidebar.write("**Reconnaissance de caractères manuscrits avec EMNIST**")
     st.sidebar.header("À propos du modèle")
     st.sidebar.write("""
